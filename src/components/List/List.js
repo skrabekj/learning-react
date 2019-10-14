@@ -17,14 +17,17 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} />
+        <Hero titleText={this.props.title} heroImage={this.props.image} />
         <div className={styles.description}>
           {this.props.children}
         </div>
-        <Hero heroImage={this.props.image} />
+        <div className={styles.columns}>
+          <Column title='animal' />
+          <Column title='plant' />
+          <Column title='mineral' />
+        </div>
       </section>
     )
   }
 }
-
 export default List;
