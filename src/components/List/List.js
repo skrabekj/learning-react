@@ -8,6 +8,10 @@ import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
 
+  state = {
+    columns: this.props.columns || [],
+  }
+
   static propTypes = {
   title: PropTypes.node,
   description: PropTypes.node,
@@ -25,9 +29,9 @@ class List extends React.Component {
           {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-          <Column title='animal' />
-          <Column title='plant' />
-          <Column title='mineral' />
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key} {...columnProps} />
+          ))}
         </div>
       </section>
     )
