@@ -4,7 +4,7 @@ import List from '../List/List.js';
 import {settings} from '../../data/dataStore';
 import Card from '../Card/Card.js';
 import Creator from '../Creator/Creator.js';
-
+import Icon from '../Icon/Icon.js';
 
 class Column extends React.Component {
 
@@ -31,7 +31,12 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.title}</h3>
+        <h3 className={styles.title}>
+          <span className={styles.icon}>
+            <Icon name={this.props.icon} />
+          </span>
+          {this.props.title}
+         </h3>
         <div className={styles.card}>
           {this.state.card.map(({key, ...cardProps}) => (
             <Card key={key} {...cardProps} />

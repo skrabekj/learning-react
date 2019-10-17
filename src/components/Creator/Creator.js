@@ -36,10 +36,14 @@ class Creator extends React.Component {
   }
 
   handleCancel(){
-    this.setState({
-      value: '',
-      visibleButtons: false
-    });
+    let result = window.confirm('Bak;sk');
+    console.log(result);
+    if(result==true){
+      this.setState({
+        value: '',
+        visibleButtons: false
+      });
+    }
   }
 
   render() {
