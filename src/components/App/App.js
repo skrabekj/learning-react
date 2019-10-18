@@ -12,15 +12,15 @@ class App extends React.Component {
     list: [],
   }
   addList(title){
-  this.setState(state => (
-    {
-      list: [
-        ...state.list,
-        title
-      ]
-    }
-  ));
-}
+    this.setState(state => (
+      {
+        list: [
+          ...state.list,
+          title,
+        ],
+      }
+    ));
+  }
   render() {
     return (
       <main className={styles.component}>
@@ -34,8 +34,8 @@ class App extends React.Component {
         <div className={listStyle.creator}>
           <Creator text={'dodaj liste'} action={title => this.addList(title)}/>
         </div>
-    </main>
-    )
+      </main>
+    );
   }
 }
 

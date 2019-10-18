@@ -21,7 +21,7 @@ class Creator extends React.Component {
     // console.log(event);
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0
+      visibleButtons: event.target.value.length > 0,
     });
   }
 
@@ -30,7 +30,7 @@ class Creator extends React.Component {
       this.props.action(this.state.value);
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -41,7 +41,7 @@ class Creator extends React.Component {
     if(result==true){
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -63,5 +63,9 @@ class Creator extends React.Component {
     );
   }
 }
+
+Creator.propTypes = {
+  action: PropTypes.node,
+};
 
 export default Creator;
