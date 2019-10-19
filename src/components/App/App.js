@@ -12,7 +12,7 @@ class App extends React.Component {
   static propTypes = {
     title: PropTypes.node,
     subtitle: PropTypes.node,
-    list: PropTypes.array,
+    lists: PropTypes.array,
   }
   state = {
     list: [],
@@ -28,24 +28,24 @@ class App extends React.Component {
     ));
   }
   render() {
-    const {title, subtitle, list} = this.props;
+    const {title, subtitle, lists} = this.props;
     return (
       <main className={styles.component}>
         {/*<h1 className={styles.title}>{pageContents.title}</h1>
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>*/}
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Hero titleText={listData.title} heroImage={listData.image} />
+        {/*<Hero titleText={listData.title} heroImage={listData.image} />
         <div className={listStyle.description}>
           {ReactHtmlParser(listData.description)}
-        </div>
-        {list.map(listData => (
+        </div>*/}
+        {lists.map(listData => (
           <List key={listData.id} {...listData} />
         ))}
-        {/*{this.state.list.map((item,index) =><List {...listData} key={index} title={item} />)}
+        {/*{this.state.list.map((item,index) =><List {...listData} key={index} title={item} />)}*/}
         <div className={listStyle.creator}>
           <Creator text={'dodaj liste'} action={title => this.addList(title)}/>
-        </div>*/}
+        </div>
       </main>
     );
   }
