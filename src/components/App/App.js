@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './App.scss';
-import List from '../List/List.js';
-import  {listData} from '../../data/dataStore'; //pageContents,
-import Hero from '../Hero/Hero.js';
-import ReactHtmlParser from 'react-html-parser';
+import List from '../List/ListContainer.js';
+//import  {listData} from '../../data/dataStore'; //pageContents,
+//import Hero from '../Hero/Hero.js';
+//import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
 import listStyle from '../List/List.scss';
 import PropTypes from 'prop-types';

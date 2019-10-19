@@ -1,15 +1,15 @@
 import React from 'react';
 import styles from './Column.scss';
 //import List from '../List/List.js';
-import {settings} from '../../data/dataStore';
-import Card from '../Card/Card.js';
-import Creator from '../Creator/Creator.js';
+//import {settings} from '../../data/dataStore';
+//import Card from '../Card/Card.js';
+//import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
 import PropTypes from 'prop-types';
 
 class Column extends React.Component {
 
-  state = {
+  /*state = {
     card: this.props.card || [],
   }
 
@@ -27,9 +27,10 @@ class Column extends React.Component {
         },
       ],
     }));
-  }
+  }*/
 
   render() {
+    /*const {icon, title} = this.props; TO ODBLOKUJ JUTRO*/
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
@@ -38,14 +39,14 @@ class Column extends React.Component {
           </span>
           {this.props.title}
         </h3>
-        <div className={styles.card}>
+        {/*<div className={styles.card}>
           {this.state.card.map(({key, ...cardProps}) => (
             <Card key={key} {...cardProps} />
           ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
-        </div>
+        </div>*/}
       </section>
     );
   }
