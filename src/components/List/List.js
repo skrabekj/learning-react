@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './List.scss';
 import Hero from '../Hero/Hero.js';
 import PropTypes from 'prop-types';
-import Column from '../Column/Column.js';
+import Column from '../Column/ColumnContainer.js';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 //import Creator from '../Creator/Creator.js';
@@ -48,7 +48,7 @@ class List extends React.Component {
         <div className={styles.description}>
           {ReactHtmlParser(description)}
         </div>
-        <h3>{this.props.title}</h3>
+        {/*<h3>{this.props.title}</h3>*/}
         <div className={styles.columns}>
           {/*{this.state.columns.map(({key, ...columnProps}) => (
             <Column key={key} {...columnProps} />
