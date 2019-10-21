@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Column.scss';
 //import List from '../List/List.js';
-//import {settings} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 import Card from '../Card/Card.js';
 //import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
@@ -28,7 +28,9 @@ class Column extends React.Component {
       ],
     }));
   }*/
-
+  static defaultProps = {
+    icon: settings.defaultColumnIcon,
+  }
   render() {
     const {cards} = this.props; //icon, title,
     return (
