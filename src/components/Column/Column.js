@@ -9,25 +9,6 @@ import PropTypes from 'prop-types';
 
 class Column extends React.Component {
 
-  /*state = {
-    card: this.props.card || [],
-  }
-
-
-  addCard(title) {
-    console.log('addCard', title);
-    this.setState(state => ({
-      card: [
-        ...state.card,
-        {
-          key: state.card.length ? state.card[state.card.length - 1].key + 1 : 0,
-          title,
-          icon: 'list-alt',
-
-        },
-      ],
-    }));
-  }*/
   static defaultProps = {
     icon: settings.defaultColumnIcon,
   }
@@ -42,9 +23,6 @@ class Column extends React.Component {
           {this.props.title}
         </h3>
         <div className={styles.card}>
-          {/*{this.state.card.map(({key, ...cardProps}) => (
-            <Card key={key} {...cardProps} />
-          ))}*/}
           {cards.map(cardData => (
             <Card key={cardData.id} {...cardData} />
           ))}
@@ -65,4 +43,3 @@ Column.propTypes = {
 };
 
 export default Column;
-//{title => this.addCard(title)}
