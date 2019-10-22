@@ -7,6 +7,7 @@ import List from '../List/ListContainer.js';
 import Creator from '../Creator/Creator.js';
 import listStyle from '../List/List.scss';
 import PropTypes from 'prop-types';
+import Search from '../Search/SearchContainer.js';
 
 class App extends React.Component {
   static propTypes = {
@@ -39,6 +40,7 @@ class App extends React.Component {
         <div className={listStyle.description}>
           {ReactHtmlParser(listData.description)}
         </div>*/}
+        <Search />
         {lists.map(listData => (
           <List key={listData.id} {...listData} />
         ))}
