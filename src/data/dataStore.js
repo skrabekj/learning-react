@@ -31,10 +31,12 @@ export const listData = {
       cards: [
         {
           key: 0,
+          index: 0,
           title: 'This Is Going to Hurt',
         },
         {
           key: 1,
+          index: 1,
           title: 'Interpreter of Maladies',
         },
       ],
@@ -46,10 +48,12 @@ export const listData = {
       cards: [
         {
           key: 0,
+          index: 0,
           title: 'Harry Potter',
         },
         {
           key: 1,
+          index: 1,
           title: 'Star Wars',
         },
       ],
@@ -61,10 +65,12 @@ export const listData = {
       cards: [
         {
           key: 0,
+          index: 0,
           title: 'The Witcher',
         },
         {
           key: 1,
+          inex: 1,
           title: 'Skyrim',
         },
       ],

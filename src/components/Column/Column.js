@@ -13,7 +13,7 @@ class Column extends React.Component {
     icon: settings.defaultColumnIcon,
   }
   render() {
-    const {cards, addcard, id} = this.props; //icon, title,
+    const {cards, addcard, id} = this.props;
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>
