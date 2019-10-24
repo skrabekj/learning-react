@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Column.scss';
-//import List from '../List/List.js';
 import {settings} from '../../data/dataStore';
 import Card from '../Card/Card.js';
 import Creator from '../Creator/Creator.js';

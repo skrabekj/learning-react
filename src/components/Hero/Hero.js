@@ -7,7 +7,7 @@ const Hero = props => {
   //console.log('img', props.heroImage);
   return <header className={styles.component}>
     <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2>
-    <img src={props.heroImage} className={styles.image} />
+    {props.heroImage && <img src={props.heroImage} className={styles.image} />}
   </header>; };
 
 Hero.propTypes = {
