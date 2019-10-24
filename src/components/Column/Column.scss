@@ -11,7 +11,7 @@
   color: $color-dark;
 
   &:last-child {
-    margin: 0 0 $base-size 0; 
+    margin: 0 0 $base-size 0;
   }
 }
 
@@ -26,6 +26,9 @@
   color: $color-warning;
   font-size: ($base-size * 2);
   vertical-align: middle;
+}
+.cards {
+  padding: ($base-size / 2) 0;
 }
 
 @media (max-width: 767px) {
