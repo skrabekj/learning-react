@@ -30,6 +30,3 @@ class Card extends React.Component {
 }
 
 export default Card;
-{/*<div className={styles.component}>
-  {this.props.title}
-</div>*/}

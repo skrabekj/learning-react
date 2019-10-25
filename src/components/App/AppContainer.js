@@ -13,9 +13,8 @@ const mapDispatchToProps = (dispatch) => ({
   addList: title => dispatch(createAction_addList({
     title,
   })),
-  moveCard: payload => dispatch(createAction_moveCard({
-    payload,
-  })),
+  moveCard: payload => dispatch(createAction_moveCard(
+    payload)),
 });
 /*const mapDispatchToProps = (dispatch) => ({
   moveCard: payload => dispatch(createAction_moveCard({
