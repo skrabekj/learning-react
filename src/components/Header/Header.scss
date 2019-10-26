@@ -1,0 +1,31 @@
+@import '../../styles/settings.scss';
+
+.component {
+  background: darken($color-dark, 3%);
+  padding: ($base-size * 1.5) 0;
+
+  a {
+    color: $color-light;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: $base-size;
+    transition: $transition;
+    &:hover {
+      color: $color-success;
+    }
+    &:global(.active) {
+      color: $color-warning;
+    }
+  }
+
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+}
