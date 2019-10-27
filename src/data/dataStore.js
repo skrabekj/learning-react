@@ -93,13 +93,13 @@ const lists = [
   {
     id: 'list-2',
     title: 'Things to do <sup>very soon!</sup>',
-    description: 'chores and other stuff',
+    description: 'Chores and other stuff',
     image: 'https://i.postimg.cc/m2x97gRd/amsterdam-4167026-1280.png',
   },
   {
     id: 'list-3',
     title: 'Things to do <sup>not so soon!</sup>',
-    description: 'Interesting things I want to check out!',
+    description: 'Mostly other stuff',
     image: 'https://i.postimg.cc/0jC96n91/letter-4395694-1280.png',
   },
 ];
