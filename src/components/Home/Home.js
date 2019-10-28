@@ -1,12 +1,10 @@
 import React from 'react';
 import styles from './Home.scss';
-//import List from '../List/ListContainer.js';
 import ListLink from '../ListLink/ListLink.js';
 import Creator from '../Creator/Creator.js';
 import listStyle from '../List/List.scss';
 import PropTypes from 'prop-types';
-//import Search from '../Search/SearchContainer.js';
-import {DragDropContext} from 'react-beautiful-dnd';
+//import {DragDropContext} from 'react-beautiful-dnd';
 
 class Home extends React.Component {
   static propTypes = {
@@ -14,14 +12,14 @@ class Home extends React.Component {
     subtitle: PropTypes.node,
     lists: PropTypes.array,
     addList: PropTypes.func,
-    moveCard: PropTypes.func,
+    //moveCard: PropTypes.func,
   }
   state = {
     list: [],
   }
   render() {
-    const {title, subtitle, lists, addList, moveCard} = this.props;
-    const moveCardHandler = result => {
+    const {title, subtitle, lists, addList} = this.props; //moveCard
+    {/*const moveCardHandler = result => {
       if(
         result.destination
         &&
@@ -43,17 +41,17 @@ class Home extends React.Component {
           },
         });
       }
-    };
+    };*/}
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
         {/*<Search />*/}
-        <DragDropContext onDragEnd={moveCardHandler}>
-          {lists.map(listData => (
-            <ListLink key={listData.id} {...listData} />
-          ))}
-        </DragDropContext>
+        {/*<DragDropContext onDragEnd={moveCardHandler}>*/}
+        {lists.map(listData => (
+          <ListLink key={listData.id} {...listData} />
+        ))}
+        {/*</DragDropContext>*/}
         <div className={listStyle.creator}>
           <Creator text={'dodaj liste'} action={title => addList(title)}/>
         </div>
