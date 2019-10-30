@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './SearchResults.scss';
 import Container from '../Container/Container';
-import Card from '../Card/Card';
+//import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 
 class SearchResults extends React.Component {
@@ -14,7 +14,7 @@ class SearchResults extends React.Component {
         <section className={styles.component}>
           <div className={styles.cards}>
             {cards.map(cardData => (
-              <Card key={cardData.id} {...cardData} />
+              <article key={cardData.id}>{cardData.title}</article>
             ))}
           </div>
         </section>
@@ -27,3 +27,7 @@ class SearchResults extends React.Component {
 }
 
 export default SearchResults;
+
+//{cards.map(cardData => (
+//  <Card key={cardData.id} {...cardData} />
+//))}
