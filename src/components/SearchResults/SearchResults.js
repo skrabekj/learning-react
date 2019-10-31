@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './SearchResults.scss';
 import Container from '../Container/Container';
-//import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
@@ -32,7 +31,3 @@ class SearchResults extends React.Component {
 }
 
 export default SearchResults;
-
-//{cards.map(cardData => (
-//  <Card key={cardData.id} {...cardData} />
-//))}

@@ -17,7 +17,6 @@ export const createAction_moveCard = payload => ({ payload, type: MOVE_CARD });
 
 // reducer
 export default function reducer(state = [], action = {}) {
-  //statePart = []
   switch (action.type) {
     case ADD_CARD:
       return [...state, { ...action.payload, id: shortid.generate() }];
@@ -81,5 +80,3 @@ export default function reducer(state = [], action = {}) {
       return state;
   }
 }
-
-//export const getCardsForColumn = ({cards, searchString}, columnId) => cards.filter(card => card.columnId == columnId && RegExp(searchString, 'i').test(card.title));
