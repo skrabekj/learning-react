@@ -3,6 +3,7 @@ import styles from './SearchResults.scss';
 import Container from '../Container/Container';
 //import Card from '../Card/Card';
 import PropTypes from 'prop-types';
+import ReactHtmlParser from 'react-html-parser';
 
 class SearchResults extends React.Component {
 
@@ -13,9 +14,11 @@ class SearchResults extends React.Component {
       <Container>
         <section className={styles.component}>
           <div className={styles.cards}>
-            {cards.map(cardData => (
-              <article key={cardData.id}>{cardData.title}</article>
-            ))}
+            {cards.map(cardData => {
+              const column = this.props.columns.find(column =>column.id==cardData.columnId);
+              const list = this.props.lists.find(list => list.id==column.listId );
+              return <article key={cardData.id}>{cardData.title} columna {column.title} lista {ReactHtmlParser(list.title)}</article>;
+            })}
           </div>
         </section>
       </Container>
@@ -23,6 +26,8 @@ class SearchResults extends React.Component {
   }
   static propTypes = {
     cards: PropTypes.array,
+    columns: PropTypes.array,
+    lists: PropTypes.array,
   };
 }
 

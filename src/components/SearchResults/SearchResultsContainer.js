@@ -5,6 +5,8 @@ import {getCardsForSearch} from '../../redux/cardRedux';
 
 const mapStateToProps = (state, props) => ({
   cards: getCardsForSearch(state, props.match.params.searchString),
+  columns: state.columns,
+  lists: state.lists,
 });
 
 const mapDispatchToProps = (dispatch) => ({

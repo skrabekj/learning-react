@@ -24,12 +24,12 @@ class Column extends React.Component {
         </h3>
         <Droppable droppableId={id}>
           {provided => (
-            <div className={styles.card}
+            <div className={styles.cards}
               {...provided.droppableProps}
               ref={provided.innerRef}
             >
-              {cards.map(cardData => (
-                <Card key={cardData.id} {...cardData} />
+              {cards.map((cardData, index) => (
+                <Card key={cardData.id} {...cardData} index={index} />
               ))}
               {provided.placeholder}
             </div>

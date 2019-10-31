@@ -12,6 +12,8 @@ const mapStateToProps = (state, props) => {
 
   return {
     columns: getColumnsForList(state, id),
+    title: listParams.title,
+    image: listParams.image,
   };
 };
 
