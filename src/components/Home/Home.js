@@ -11,7 +11,6 @@ class Home extends React.Component {
     subtitle: PropTypes.node,
     lists: PropTypes.array,
     addList: PropTypes.func,
-    //moveCard: PropTypes.func,
   }
   state = {
     list: [],

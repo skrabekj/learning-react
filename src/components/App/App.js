@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from '../Home/HomeContainer';
 import Info from '../Info/Info';
-import Faq from '../Faq/Faq';
-import {BrowserRouter, Route} from 'react-router-dom'; 
+import Faq from '../FAQ/FAQ';
+import {BrowserRouter, Route} from 'react-router-dom';
 import MainLayout from '../MainLayout/MainLayout.js';
 import {AnimatedSwitch} from 'react-router-transition';
 import styles from './App.scss';
